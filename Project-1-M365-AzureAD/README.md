@@ -1,6 +1,6 @@
 # Project 1 — Microsoft 365 & Azure AD Administration
 
-**Duration:** 3 weeks | **Status:** Planned | **Cost:** €0
+**Duration:** unknown | **Status:** Planned | **Cost:** €0
 
 > Build a complete cloud identity and device management environment for a fictional company, "Faizi-IT BV", using Microsoft 365 and Azure Active Directory.
 
