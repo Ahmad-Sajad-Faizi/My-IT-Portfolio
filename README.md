@@ -13,7 +13,7 @@ cloud identity management, on-premises infrastructure, network
 administration, and IT service management. All projects are 
 self-hosted and fully documented.
 
-Belgium | email: ahmadsajadfaizi@gmail.com | website: https://faizi.ovh 
+Belgium | email: ahmadsajadfaizi@gmail.com | website: https://faizi.ovh |
 LinkedIn: https://www.linkedin.com/in/ahmad-sajad-faizi-7bb937265/
 
 ---
