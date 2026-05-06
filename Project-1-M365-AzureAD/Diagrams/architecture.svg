@@ -1,0 +1,83 @@
+<svg width="100%" viewBox="0 0 680 580" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>M365 and Azure AD architecture diagram</title>
+<desc>Structural diagram of a Microsoft 365 tenant. Azure AD / Entra ID sits on the left with identity components including users and groups, conditional access, MFA and SSPR, admin roles, and app registrations. Microsoft 365 services sit on the right including Exchange Online, Microsoft Teams, SharePoint Online, OneDrive for Business, and Microsoft Intune. Microsoft 365 Admin Center is shown above the tenant, and end users and devices are shown below.</desc>
+<defs>
+  <style>
+    .t  { font-family: sans-serif; font-size: 14px; font-weight: 400; fill: #3d3d3a; }
+    .ts { font-family: sans-serif; font-size: 12px; font-weight: 400; fill: #73726c; }
+    .th { font-family: sans-serif; font-size: 14px; font-weight: 600; fill: #3d3d3a; }
+    .box-fill   { fill: #f1efeb; stroke: #b4b2a9; stroke-width: 0.5; }
+    .blue-fill  { fill: #e6f1fb; stroke: #85b7eb; stroke-width: 0.5; }
+    .blue-th    { font-family: sans-serif; font-size: 14px; font-weight: 600; fill: #0c447c; }
+    .purple-fill { fill: #eeedfe; stroke: #afa9ec; stroke-width: 0.5; }
+    .purple-th  { font-family: sans-serif; font-size: 14px; font-weight: 600; fill: #3c3489; }
+    .teal-fill  { fill: #e1f5ee; stroke: #5dcaa5; stroke-width: 0.5; }
+    .teal-th    { font-family: sans-serif; font-size: 14px; font-weight: 600; fill: #085041; }
+    .arr        { stroke: #888780; stroke-width: 1.2; fill: none; }
+  </style>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="#888780" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+</defs>
+
+<!-- Admin Center (external, top) -->
+<rect x="228" y="14" width="224" height="44" rx="8" class="box-fill"/>
+<text class="th" x="340" y="36" text-anchor="middle" dominant-baseline="central">Microsoft 365 admin center</text>
+
+<!-- Arrow: Admin Center down to Tenant -->
+<line x1="340" y1="58" x2="340" y2="88" class="arr" marker-end="url(#arrow)"/>
+
+<!-- M365 Tenant outer container -->
+<rect x="40" y="90" width="600" height="400" rx="20" class="blue-fill"/>
+<text class="blue-th" x="340" y="118" text-anchor="middle" dominant-baseline="central">Microsoft 365 tenant</text>
+
+<!-- Azure AD inner container -->
+<rect x="60" y="132" width="260" height="350" rx="12" class="purple-fill"/>
+<text class="purple-th" x="190" y="160" text-anchor="middle" dominant-baseline="central">Azure AD / Entra ID</text>
+
+<!-- Azure AD sub-boxes -->
+<rect x="80" y="176" width="220" height="44" rx="6" class="box-fill"/>
+<text class="t" x="190" y="198" text-anchor="middle" dominant-baseline="central">Users &amp; groups</text>
+
+<rect x="80" y="234" width="220" height="44" rx="6" class="box-fill"/>
+<text class="t" x="190" y="256" text-anchor="middle" dominant-baseline="central">Conditional access</text>
+
+<rect x="80" y="292" width="220" height="44" rx="6" class="box-fill"/>
+<text class="t" x="190" y="314" text-anchor="middle" dominant-baseline="central">MFA &amp; SSPR</text>
+
+<rect x="80" y="350" width="220" height="44" rx="6" class="box-fill"/>
+<text class="t" x="190" y="372" text-anchor="middle" dominant-baseline="central">Admin roles (RBAC)</text>
+
+<rect x="80" y="408" width="220" height="44" rx="6" class="box-fill"/>
+<text class="t" x="190" y="430" text-anchor="middle" dominant-baseline="central">App registrations</text>
+
+<!-- M365 Services inner container -->
+<rect x="360" y="132" width="260" height="350" rx="12" class="teal-fill"/>
+<text class="teal-th" x="490" y="160" text-anchor="middle" dominant-baseline="central">Microsoft 365 services</text>
+
+<!-- Services sub-boxes -->
+<rect x="380" y="176" width="220" height="44" rx="6" class="box-fill"/>
+<text class="t" x="490" y="198" text-anchor="middle" dominant-baseline="central">Exchange Online</text>
+
+<rect x="380" y="234" width="220" height="44" rx="6" class="box-fill"/>
+<text class="t" x="490" y="256" text-anchor="middle" dominant-baseline="central">Microsoft Teams</text>
+
+<rect x="380" y="292" width="220" height="44" rx="6" class="box-fill"/>
+<text class="t" x="490" y="314" text-anchor="middle" dominant-baseline="central">SharePoint Online</text>
+
+<rect x="380" y="350" width="220" height="44" rx="6" class="box-fill"/>
+<text class="t" x="490" y="372" text-anchor="middle" dominant-baseline="central">OneDrive for Business</text>
+
+<rect x="380" y="408" width="220" height="44" rx="6" class="box-fill"/>
+<text class="t" x="490" y="430" text-anchor="middle" dominant-baseline="central">Microsoft Intune</text>
+
+<!-- Auth arrow between sections (in gap x=320 to x=360) -->
+<line x1="320" y1="314" x2="358" y2="314" class="arr" marker-end="url(#arrow)"/>
+
+<!-- Arrow: Tenant bottom to End Users -->
+<line x1="340" y1="492" x2="340" y2="514" class="arr" marker-end="url(#arrow)"/>
+
+<!-- End Users box (external, bottom) -->
+<rect x="228" y="516" width="224" height="44" rx="8" class="box-fill"/>
+<text class="th" x="340" y="538" text-anchor="middle" dominant-baseline="central">End users / devices</text>
+</svg>
