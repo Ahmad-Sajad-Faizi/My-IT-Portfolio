@@ -50,6 +50,8 @@ The Microsoft 365 Developer Program provides a free sandbox environment with **2
 
 To simulate a realistic SMB environment, a **Microsoft 365 Business Premium** trial was also activated via the Microsoft 365 admin center.
 
+> **Why two licences?** The E5 Developer subscription (25 licences) is used for lab users and enables Azure AD Premium P2 features such as Identity Protection and Privileged Identity Management (PIM). The Business Premium trial (1 licence) simulates the SMB-oriented licence that most small companies actually purchase, and is used for the primary admin account to test the full Business Premium feature set (Intune, Defender for Business, Exchange Online). This dual-licence approach allows the lab to cover both SMB and enterprise security scenarios within a single tenant.
+
 **Procedure:**
 
 1. From the admin center, navigate to **Billing → Purchase services**.
@@ -111,12 +113,12 @@ Immediately after tenant creation, MFA was enforced on the Global Admin account 
 
 ## 5. Licences Assigned
 
-| Licence                        | Quantity | Purpose                            |
-| ------------------------------ | -------- | ---------------------------------- |
-| Microsoft 365 E5 Developer     | 25       | Lab users, testing, development    |
-| Microsoft 365 Business Premium | 1        | Primary admin, full service access |
+| Licence                        | Quantity | Purpose                                                              |
+| ------------------------------ | -------- | -------------------------------------------------------------------- |
+| Microsoft 365 E5 Developer     | 25       | Lab users, testing, P2 features (Identity Protection, PIM)          |
+| Microsoft 365 Business Premium | 1        | Primary admin; simulates realistic SMB licence with Intune + Defender |
 
-> **Note:** The E5 Developer subscription includes Azure AD Premium P2, enabling advanced security features such as Conditional Access and Identity Protection. The Business Premium subscription provides the SMB-oriented feature set (Intune, Exchange Online, Teams).
+> **Note:** The E5 Developer subscription includes Azure AD Premium P2, enabling advanced security features such as Conditional Access and Identity Protection. The Business Premium subscription provides the SMB-oriented feature set most commonly found in small Belgian companies. Together they allow this lab to cover both SMB and enterprise security scenarios within a single tenant.
 
 ---
 
