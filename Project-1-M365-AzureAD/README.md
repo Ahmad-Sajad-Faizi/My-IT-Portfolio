@@ -1,6 +1,6 @@
 # Project 1 — Microsoft 365 & Azure AD Administration
 
-**Duration:** unknown | **Status:** Planned | **Cost:** €0
+**Duration:** April–May 2026 (in progress) | **Status:** In Progress | **Cost:** €0
 
 > Build a complete cloud identity and device management environment for a fictional company, "Faizi-IT BV", using Microsoft 365 and Azure Active Directory.
 
@@ -50,11 +50,11 @@ Faizi-IT BV — Microsoft 365 Tenant ()
 ## Requirements Checklist
 
 ### A. Tenant Setup & User Management
-- [ ] Microsoft 365 Developer Tenant (free, 25 licenses)
-- [ ] Azure Free Account activated
-- [ ] Domain configured (faiziit.onmicrosoft.com)
-- [ ] 10 test users created with different roles
-- [ ] Licenses assigned (M365 Business Premium, E5 Developer)
+- [x] Microsoft 365 Developer Tenant (free, 25 licences)
+- [x] Azure Free Account activated
+- [x] Domain configured (faiziitlab.onmicrosoft.com)
+- [x] 10 test users created with different roles
+- [x] Licenses assigned (M365 Business Premium, E5 Developer)
 - [ ] Dynamic groups configured (department/location based)
 
 ### B. Security & Identity
@@ -116,7 +116,7 @@ Project-1-M365-AzureAD/
     │   └── configuration-profiles.md     ← Wi-Fi, VPN, branding profiles
     └── D-exchange-online-&-collaboration/
         ├── shared-mailboxes.md            ← Shared mailboxes and aliases
-        ├── transport-rules.md             ← Disclaimer and warning rules
+        ├── transport-rules.md            ← Disclaimer and warning rules
         └── teams-structure.md            ← Teams and channel configuration
 
 ```
