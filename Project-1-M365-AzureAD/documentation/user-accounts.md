@@ -272,6 +272,7 @@ The Global Admin account was created automatically during tenant signup (see [A.
    ![Add User — Yuki Tanaka Set up](media/Pasted%20image%2020260507232957.png)
 
 2. **Confirmation:**
+   
    ![Add User — Yuki Tanaka Success](media/Pasted%20image%2020260507233101.png)
 
 ---
