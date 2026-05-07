@@ -50,7 +50,7 @@ LinkedIn: https://www.linkedin.com/in/ahmad-sajad-faizi-7bb937265/
 | Host CPU | Intel Core i5-7500 @ 3.40GHz (4 cores) |
 | Host RAM | 8 GB |
 | Host Storage | 1 TB |
-| Website | Nginx on VPS — [faizi.ovh](https://faizi.ovh) |
+| Website | [faizi.ovh](https://faizi.ovh) |
 
 ---
 
@@ -61,8 +61,6 @@ LinkedIn: https://www.linkedin.com/in/ahmad-sajad-faizi-7bb937265/
 - [ ] Project 3 — ITSM & Jira
 - [ ] Project 4 — Networking
 - [ ] Project 5 — Scripting
-- [ ] Website published
-- [ ] CV updated
 
 ---
 
@@ -70,11 +68,11 @@ LinkedIn: https://www.linkedin.com/in/ahmad-sajad-faizi-7bb937265/
 
 Each project folder contains:
 - `README.md` — Project overview and architecture
-- `setup-guide.md` — Step-by-step implementation with screenshots
-- `troubleshooting.md` — Problems encountered and solutions
+- `setup-guide.md` — Step-by-step implementation
+- `troubleshooting.md` — Problems and solutions
 - `scripts/` — Any automation scripts used
 - `diagrams/` — Architecture and network diagrams
-
+- `documentation/` — Project implementation with screenshots
 ---
 
 *Built as a self-study portfolio to demonstrate real-world IT skills.*
