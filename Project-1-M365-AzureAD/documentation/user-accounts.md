@@ -202,7 +202,7 @@ The Global Admin account was created automatically during tenant signup (see [A.
 2. **Assign product licences:**
    - Location: Belgium
    - Licence: Microsoft 365 Business Premium
-   [Add User — Marco Rossi Licences](media/Pasted%20image%2020260507195419.png)
+   ![Add User — Marco Rossi Licences](media/Pasted%20image%2020260507195419.png)
 
 3. **Optional settings — Roles:**
    - Select role: **User** (no admin access)
