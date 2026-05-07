@@ -59,29 +59,29 @@ The Global Admin account was created automatically during tenant signup (see [A.
    - Domain: `faiziitlab.onmicrosoft.com`
    - Automatically create a password: **Enabled**
    - Require password change at next sign-in: **Enabled**
-   ![[media/Pasted image 20260507194013.png]]
-   ![[media/Pasted image 20260507194219.png]]
+   ![Add User — Sarah Mitchell Basics](media/Pasted%20image%2020260507194013.png)
+   ![Add User — Sarah Mitchell Basics](media/Pasted%20image%2020260507194219.png)
 3. **Assign product licences:**
    - Select location: **Belgium**
    - Assign: **Microsoft 365 Business Premium**
    - Create user without product licence: **Unchecked**
-   ![[media/Pasted image 20260507194316.png]]
-   ![[media/Pasted image 20260507194340.png]]
+   ![Add User — Sarah Mitchell Licences](media/Pasted%20image%2020260507194316.png)
+   ![Add User — Sarah Mitchell Licence Confirm](media/Pasted%20image%2020260507194340.png)
 
 4. **Optional settings — Roles:**
    - Select role: **User Administrator**
    - Admin center access: Limited (only user management)
-   ![[media/Pasted image 20260507194407.png]]
-   ![[media/Pasted image 20260507194455.png]]
+   ![Add User — Sarah Mitchell Roles](media/Pasted%20image%2020260507194407.png)
+   ![Add User — Sarah Mitchell Optional Settings](media/Pasted%20image%2020260507194455.png)
 
 5. **Review and finish:**
    - Verify display name, username, licences, and role assignment.
    - Click **Finish adding**.
-   ![[media/Pasted image 20260507194604.png]]
-   ![[media/Pasted image 20260507194622.png]]
+   ![Add User — Sarah Mitchell Review](media/Pasted%20image%2020260507194604.png)
+   ![Add User — Sarah Mitchell Success](media/Pasted%20image%2020260507194622.png)
 
 6. **Result:** Sarah Mitchell appears in Active users with the User Administrator role and Business Premium licence.
-   ![[media/Pasted image 20260507194631.png]]
+   ![Active Users — Sarah Mitchell Profile](media/Pasted%20image%2020260507194631.png)
 
 ---
 
@@ -94,20 +94,20 @@ The Global Admin account was created automatically during tenant signup (see [A.
    - Last name: Kowalski
    - Display name: James Kowalski
    - Username: `jkowalski`
-   ![[media/Pasted image 20260507194648.png]]
+   ![Add User — James Kowalski Basics](media/Pasted%20image%2020260507194648.png)
 
 2. **Assign product licences:**
    - Location: Belgium
    - Licence: Microsoft 365 Business Premium
-   ![[media/Pasted image 20260507194658.png]]
+   ![Add User — James Kowalski Licences](media/Pasted%20image%2020260507194658.png)
 
 3. **Optional settings — Roles:**
    - Select role: **User Administrator**
-   ![[media/Pasted image 20260507194708.png]]
+   ![Add User — James Kowalski Roles](media/Pasted%20image%2020260507194708.png)
 
 4. **Review and finish:**
-   ![[media/Pasted image 20260507194715.png]]
-   ![[media/Pasted image 20260507194726.png]]
+   ![Add User — James Kowalski Review](media/Pasted%20image%2020260507194715.png)
+   ![Add User — James Kowalski Success](media/Pasted%20image%2020260507194726.png)
 
 ---
 
@@ -120,20 +120,20 @@ The Global Admin account was created automatically during tenant signup (see [A.
    - Last name: Larsson
    - Display name: Emma Larsson
    - Username: `elarsson`
-   ![[media/Pasted image 20260507194733.png]]
+   ![Add User — Emma Larsson Basics](media/Pasted%20image%2020260507194733.png)
 
 2. **Assign product licences:**
    - Location: Belgium
    - Licence: Microsoft 365 Business Premium
-   ![[media/Pasted image 20260507233756.png]]
+   ![Add User — Emma Larsson Licences](media/Pasted%20image%2020260507233756.png)
 
 3. **Optional settings — Roles:**
    - Select role: **User** (no admin access)
-   ![[media/Pasted image 20260507195210.png]]
+   ![Add User — Emma Larsson Roles](media/Pasted%20image%2020260507195210.png)
 
 4. **Review and finish:**
-   ![[media/Pasted image 20260507195218.png]]
-   ![[media/Pasted image 20260507233717.png]]
+   ![Add User — Emma Larsson Review](media/Pasted%20image%2020260507195218.png)
+   ![Add User — Emma Larsson Success](media/Pasted%20image%2020260507233717.png)
 
 ---
 
@@ -146,20 +146,20 @@ The Global Admin account was created automatically during tenant signup (see [A.
    - Last name: Okonkwo
    - Display name: David Okonkwo
    - Username: `dokonkwo`
-   ![[media/Pasted image 20260507195234.png]]
+   ![Add User — David Okonkwo Basics](media/Pasted%20image%2020260507195234.png)
 
 2. **Assign product licences:**
    - Location: Belgium
    - Licence: Microsoft 365 Business Premium
-   ![[media/Pasted image 20260507195241.png]]
+   ![Add User — David Okonkwo Licences](media/Pasted%20image%2020260507195241.png)
 
 3. **Optional settings — Roles:**
    - Select role: **User** (no admin access)
-   ![[media/Pasted image 20260507195247.png]]
+   ![Add User — David Okonkwo Roles](media/Pasted%20image%2020260507195247.png)
 
 4. **Review and finish:**
-   ![[media/Pasted image 20260507195254.png]]
-   ![[media/Pasted image 20260507195302.png]]
+   ![Add User — David Okonkwo Review](media/Pasted%20image%2020260507195254.png)
+   ![Add User — David Okonkwo Success](media/Pasted%20image%2020260507195302.png)
 
 ---
 
@@ -172,20 +172,20 @@ The Global Admin account was created automatically during tenant signup (see [A.
    - Last name: Vandenberg
    - Display name: Lisa Vandenberg
    - Username: `lvandenberg`
-   ![[media/Pasted image 20260507195314.png]]
+   ![Add User — Lisa Vandenberg Basics](media/Pasted%20image%2020260507195314.png)
 
 2. **Assign product licences:**
    - Location: Belgium
    - Licence: Microsoft 365 Business Premium
-   ![[media/Pasted image 20260507234622.png]]
+   ![Add User — Lisa Vandenberg Licences](media/Pasted%20image%2020260507234622.png)
 
 3. **Optional settings — Roles:**
    - Select role: **User** (no admin access)
-   ![[media/Pasted image 20260507234635.png]]
+   ![Add User — Lisa Vandenberg Roles](media/Pasted%20image%2020260507234635.png)
 
 4. **Review and finish:**
-   ![[media/Pasted image 20260507195333.png]]
-   ![[media/Pasted image 20260507195339.png]]
+   ![Add User — Lisa Vandenberg Review](media/Pasted%20image%2020260507195333.png)
+   ![Add User — Lisa Vandenberg Success](media/Pasted%20image%2020260507195339.png)
 
 ---
 
@@ -198,20 +198,20 @@ The Global Admin account was created automatically during tenant signup (see [A.
    - Last name: Rossi
    - Display name: Marco Rossi
    - Username: `mrossi`
-   ![[media/Pasted image 20260507233436.png]]
+   ![Add User — Marco Rossi Basics](media/Pasted%20image%2020260507233436.png)
 
 2. **Assign product licences:**
    - Location: Belgium
    - Licence: Microsoft 365 Business Premium
-   ![[media/Pasted image 20260507195419.png]]
+   [Add User — Marco Rossi Licences](media/Pasted%20image%2020260507195419.png)
 
 3. **Optional settings — Roles:**
    - Select role: **User** (no admin access)
-   ![[media/Pasted image 20260507195425.png]]
+   ![Add User — Marco Rossi Roles](media/Pasted%20image%2020260507195425.png)
 
 4. **Review and finish:**
-   ![[media/Pasted image 20260507195432.png]]
-   ![[media/Pasted image 20260507195441.png]]
+   ![Add User — Marco Rossi Review](media/Pasted%20image%2020260507195432.png)
+   ![Add User — Marco Rossi Success](media/Pasted%20image%2020260507195441.png)
 
 ---
 
@@ -224,20 +224,20 @@ The Global Admin account was created automatically during tenant signup (see [A.
    - Last name: Al-Hassan
    - Display name: Fatima Al-Hassan
    - Username: `falhassan`
-   ![[media/Pasted image 20260507195451.png]]
+   ![Add User — Fatima Al-Hassan Basics](media/Pasted%20image%2020260507195451.png)
 
 2. **Assign product licences:**
    - Location: Belgium
    - Licence: Microsoft 365 Business Premium
-   ![[media/Pasted image 20260507195456.png]]
+   ![Add User — Fatima Al-Hassan Licences](media/Pasted%20image%2020260507195456.png)
 
 3. **Optional settings — Roles:**
    - Select role: **User** (no admin access)
-   ![[media/Pasted image 20260507195503.png]]
+   ![Add User — Fatima Al-Hassan Roles](media/Pasted%20image%2020260507195503.png)
 
 4. **Review and finish:**
-   ![[media/Pasted image 20260507195508.png]]
-   ![[media/Pasted image 20260507195514.png]]
+   ![Add User — Fatima Al-Hassan Review](media/Pasted%20image%2020260507195508.png)
+   ![Add User — Fatima Al-Hassan Success](media/Pasted%20image%2020260507195514.png)
 
 ---
 
@@ -252,11 +252,10 @@ The Global Admin account was created automatically during tenant signup (see [A.
    - Username: `tberger`
    - No licence assigned (Guest users consume no paid licences)
    - Select role: **Guest Inviter**
-   ![[media/Pasted image 20260507232415.png]]
+   ![Add User — Thomas Berger Set up](media/Pasted%20image%2020260507232415.png)
 
 2. **Confirmation:**
-
-   ![[media/Pasted image 20260507232820.png]]
+   ![Add User — Thomas Berger Success](media/Pasted%20image%2020260507232820.png)
    
 ---
 
@@ -271,17 +270,17 @@ The Global Admin account was created automatically during tenant signup (see [A.
    - Username: `ytanaka`
    - No licence assigned
    - Select role: **Guest Inviter** 
-   ![[media/Pasted image 20260507232957.png]]
+   ![Add User — Yuki Tanaka Set up](media/Pasted%20image%2020260507232957.png)
 
 2. **Confirmation:**
-   ![[media/Pasted image 20260507233101.png]]
+   ![Add User — Yuki Tanaka Success](media/Pasted%20image%2020260507233101.png)
 
 ---
 
 ## 4. Final Active Users Overview
 
 After all accounts were created, the **Active users** page in the Microsoft 365 admin center displayed the complete user directory:
-![[media/Pasted image 20260507233221.png]]
+ ![Active Users — Complete List](media/Pasted%20image%2020260507233221.png)
 
 ### 4.1 User Summary Table
 
