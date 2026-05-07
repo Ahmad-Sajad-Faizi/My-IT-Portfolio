@@ -19,15 +19,15 @@ Before creating accounts, the following structure was designed to reflect a typi
 | # | Display Name | Username | Role | Department | Licence | Account Type |
 |---|-------------|----------|------|------------|---------|--------------|
 | 1 | **Ahmad Faizi** | ahmad@faiziitlab.onmicrosoft.com | Global Administrator | IT / Management | Business Premium | Admin |
-| 2 | **Sarah Mitchell** | smitchell@faiziitlab.onmicrosoft.com | User Administrator | IT / Support | M365 Business Premium | Admin |
-| 3 | **James Kowalski** | jkowalski@faiziitlab.onmicrosoft.com | User Administrator | IT / Security | M365 Business Premium | Admin |
-| 4 | **Emma Larsson** | elarsson@faiziitlab.onmicrosoft.com | Standard User | Development | M365 Business Premium | Member |
-| 5 | **David Okonkwo** | dokonkwo@faiziitlab.onmicrosoft.com | Standard User | Development | M365 Business Premium | Member |
-| 6 | **Lisa Vandenberg** | lvandenberg@faiziitlab.onmicrosoft.com | Standard User | Marketing | M365 Business Premium | Member |
-| 7 | **Marco Rossi** | mrossi@faiziitlab.onmicrosoft.com | Standard User | Sales | M365 Business Premium | Member |
-| 8 | **Fatima Al-Hassan** | falhassan@faiziitlab.onmicrosoft.com | Standard User | HR | M365 Business Premium | Member |
-| 9 | **Thomas Berger** | tberger@faiziitlab.onmicrosoft.com | Guest User | External Consultant | — | Guest |
-| 10 | **Yuki Tanaka** | ytanaka@faiziitlab.onmicrosoft.com | Guest User | External Auditor | — | Guest |
+| 2 | **Sarah Mitchell** | s.mitchell@faiziitlab.onmicrosoft.com | User Administrator | IT / Support | M365 Business Premium | Admin |
+| 3 | **James Kowalski** | j.kowalski@faiziitlab.onmicrosoft.com | User Administrator | IT / Security | M365 Business Premium | Admin |
+| 4 | **Emma Larsson** | e.larsson@faiziitlab.onmicrosoft.com | Standard User | Development | M365 Business Premium | Member |
+| 5 | **David Okonkwo** | d.okonkwo@faiziitlab.onmicrosoft.com | Standard User | Development | M365 Business Premium | Member |
+| 6 | **Lisa Vandenberg** | l.vandenberg@faiziitlab.onmicrosoft.com | Standard User | Marketing | M365 Business Premium | Member |
+| 7 | **Marco Rossi** | m.rossi@faiziitlab.onmicrosoft.com | Standard User | Sales | M365 Business Premium | Member |
+| 8 | **Fatima Al-Hassan** | f.alhassan@faiziitlab.onmicrosoft.com | Standard User | HR | M365 Business Premium | Member |
+| 9 | **Thomas Berger** | t.berger@faiziitlab.onmicrosoft.com | Guest User | External Consultant | — | Guest |
+| 10 | **Yuki Tanaka** | y.tanaka@faiziitlab.onmicrosoft.com | Guest User | External Auditor | — | Guest |
 
 > **Design rationale:**
 > - **2 User Administrators** to demonstrate delegated admin responsibilities without full Global Admin rights.
