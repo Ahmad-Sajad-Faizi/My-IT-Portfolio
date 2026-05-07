@@ -1,6 +1,41 @@
 # Troubleshooting Guide — M365 + Azure AD
 
+> **About this document:** This file serves two purposes. The first section (**Real Issues Encountered**) logs actual problems that came up during the implementation of this project, with the exact symptoms and how they were resolved. The second section (**Reference Guide**) is a broader troubleshooting reference covering common M365 and Azure AD issues, intended as a knowledge base for future use.
+
 > Each issue includes symptoms, root cause, and step-by-step resolution. Issues are grouped by area.
+
+---
+
+## Real Issues Encountered During This Project
+
+> This section documents genuine problems encountered while building the Faizi-IT BV lab environment. It will grow as the project progresses.
+
+---
+
+### Issue 001 — MFA registration prompt did not appear for new users after tenant creation
+
+**When:** Section A — Tenant setup, after creating the first standard user accounts.
+
+**Symptoms:** Newly created users (Emma Larsson, David Okonkwo, etc.) could sign in without being prompted to register MFA, even though the Global Admin account had MFA configured.
+
+**Root cause:** The tenant had **Security Defaults** enabled (which enforces MFA on a per-login basis when Microsoft decides) but Conditional Access policies had not yet been configured. Security Defaults does not force immediate MFA registration at first sign-in for all users — it prompts users gradually over a 14-day window.
+
+**Resolution:**
+1. Navigated to **Entra Admin Center → Identity → Overview → Properties → Manage Security defaults** and confirmed Security Defaults was enabled.
+2. For the lab, decided to leave Security Defaults active for the current section (A) and replace it with explicit Conditional Access policies in Section B, which will force MFA registration for all users immediately.
+3. Added a note in `setup-guide.md` Step 8 to document this behaviour so future users know what to expect.
+
+**Lesson learned:** Security Defaults and Conditional Access serve different purposes. Security Defaults is suitable for quick baseline protection but lacks the granularity needed for a realistic lab. Plan to migrate to Conditional Access in Section B.
+
+---
+
+*(Additional issues will be logged here as the project progresses.)*
+
+---
+
+---
+
+# Reference Guide
 
 ---
 
