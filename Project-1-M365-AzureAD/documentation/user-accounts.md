@@ -34,6 +34,8 @@ Before creating accounts, the following structure was designed to reflect a typi
 > - **5 Standard Users** across different departments to test group-based policies and dynamic membership later.
 > - **2 Guest Users** to simulate B2B collaboration and external access scenarios.
 
+> **Note on Guest Users in a lab environment:** In production, external B2B guests are invited via **Entra ID → External Identities → External collaboration settings** using their real external email address. Azure AD then creates a guest object (`user#EXT#@tenant.onmicrosoft.com`) in the directory. In this lab, Thomas Berger and Yuki Tanaka were created as internal accounts to simulate guest-like access without requiring real external email addresses. The **Guest Inviter** directory role was assigned to allow them to invite other guests — it does not affect their access level as end users. In a real deployment these would be proper B2B invitations.
+
 ---
 
 ## 3. Step-by-Step User Creation
@@ -251,11 +253,14 @@ The Global Admin account was created automatically during tenant signup (see [A.
    - Username: `t.berger`
    - No licence assigned (Guest users consume no paid licences)
    - Select role: **Guest Inviter**
+
+   > **Lab note:** In production, external guests are invited via **Entra ID → External Identities** using their real email address — Azure AD then creates a `#EXT#` guest object. Here, Thomas Berger is created as an internal account to simulate guest-level access without requiring a real external mailbox. The **Guest Inviter** directory role was assigned so this account can invite other guests, which is a realistic permission for an external consultant. It does not grant any broader administrative access.
+
    ![Add User — Thomas Berger Set up](media/Pasted%20image%2020260507232415.png)
 
 2. **Confirmation:**
    ![Add User — Thomas Berger Success](media/Pasted%20image%2020260507232820.png)
-   
+
 ---
 
 ### 3.10 Guest User — Yuki Tanaka (External Auditor)
@@ -268,11 +273,13 @@ The Global Admin account was created automatically during tenant signup (see [A.
    - Display name: Yuki Tanaka
    - Username: `y.tanaka`
    - No licence assigned
-   - Select role: **Guest Inviter** 
+   - Select role: **Guest Inviter**
+
+   > **Lab note:** Same approach as Thomas Berger above. In a real environment, an external auditor would be a proper B2B guest invited from their own organisation's Azure AD tenant.
+
    ![Add User — Yuki Tanaka Set up](media/Pasted%20image%2020260507232957.png)
 
 2. **Confirmation:**
-   
    ![Add User — Yuki Tanaka Success](media/Pasted%20image%2020260507233101.png)
 
 ---
@@ -294,8 +301,8 @@ After all accounts were created, the **Active users** page in the Microsoft 365 
 | 6   | Lisa Vandenberg  | l.vandenberg@faiziitlab.onmicrosoft.com | Standard User        | Business Premium | ✅ Active |
 | 7   | Marco Rossi      | m.rossi@faiziitlab.onmicrosoft.com      | Standard User        | Business Premium | ✅ Active |
 | 8   | Fatima Al-Hassan | f.alhassan@faiziitlab.onmicrosoft.com   | Standard User        | Business Premium | ✅ Active |
-| 9   | Thomas Berger    | t.berger@faiziitlab.onmicrosoft.com     | Guest User           | —                | ✅ Active |
-| 10  | Yuki Tanaka      | y.tanaka@faiziitlab.onmicrosoft.com     | Guest User           | —                | ✅ Active |
+| 9   | Thomas Berger    | t.berger@faiziitlab.onmicrosoft.com     | Guest User (lab)     | —                | ✅ Active |
+| 10  | Yuki Tanaka      | y.tanaka@faiziitlab.onmicrosoft.com     | Guest User (lab)     | —                | ✅ Active |
 
 ---
 
@@ -306,7 +313,7 @@ After all accounts were created, the **Active users** page in the Microsoft 365 
 | **Global Administrator** | 1     | Full control over all Microsoft 365 services and Azure AD                      |
 | **User Administrator**   | 2     | Manage users, groups, licences; reset passwords; cannot manage global settings |
 | **Standard User**        | 5     | End-user access to assigned apps and services; no admin privileges             |
-| **Guest User**           | 2     | Limited access to shared resources; no licence consumption                     |
+| **Guest User (lab)**     | 2     | Internal accounts simulating guest-level access; no licence consumption        |
 
 ---
 
