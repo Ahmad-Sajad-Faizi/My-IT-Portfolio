@@ -37,14 +37,14 @@ The Microsoft 365 Developer Program provides a free sandbox environment with **2
    - **Areas of interest:** Microsoft Graph, Microsoft Identity platform, Microsoft Teams, Outlook, Power Platform
    - **Country/Region:** Belgium
 
-   ![Developer Program Signup — Profile](Project-1-M365-AzureAD/documentation/media/Pasted image 20260507172108.png)
-   ![[Project-1-M365-AzureAD/documentation/media/Pasted image 20260507172127.png]]
-   ![[Project-1-M365-AzureAD/documentation/media/Pasted image 20260507172135.png]]
-   ![[Project-1-M365-AzureAD/documentation/media/Pasted image 20260507172145.png]]
+   ![Developer Program Signup — Profile]("Project-1-M365-AzureAD/documentation/media/Pasted image 20260507172108.png")
+   ![Developer Program — Focus Areas]("Project-1-M365-AzureAD/documentation/media/Pasted image 20260507172127.png")
+   ![Developer Program — Interests]("Project-1-M365-AzureAD/documentation/media/Pasted image 20260507172135.png")
+   ![Developer Program — Phone Verification]("Project-1-M365-AzureAD/documentation/media/Pasted image 20260507172145.png")
 
 4. After verification, the tenant dashboard loads. The subscription is provisioned automatically.
 
-   ![[Project-1-M365-AzureAD/documentation/media/Pasted image 20260507172213.png]]
+   ![Developer Program — Welcome Dashboard]("Project-1-M365-AzureAD/documentation/media/Pasted image 20260507172213.png")
 
 ### 3.2 Subscribe to Microsoft 365 Business Premium
 
