@@ -37,7 +37,7 @@ The Microsoft 365 Developer Program provides a free sandbox environment with **2
    - **Areas of interest:** Microsoft Graph, Microsoft Identity platform, Microsoft Teams, Outlook, Power Platform
    - **Country/Region:** Belgium
 
-   ![[Project-1-M365-AzureAD/documentation/media/Pasted image 20260507172108.png]]
+   ![Developer Program Signup — Profile](media/Pasted image 20260507172108.png)
    ![[Project-1-M365-AzureAD/documentation/media/Pasted image 20260507172127.png]]
    ![[Project-1-M365-AzureAD/documentation/media/Pasted image 20260507172135.png]]
    ![[Project-1-M365-AzureAD/documentation/media/Pasted image 20260507172145.png]]
