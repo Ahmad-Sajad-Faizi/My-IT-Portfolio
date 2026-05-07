@@ -99,8 +99,35 @@ Project-1-M365-AzureAD/
 ├── setup-guide.md          ← Step-by-step implementation
 ├── security-matrix.md      ← Policy overview
 ├── troubleshooting.md      ← Issues & solutions
-└── diagrams/
-    └── architecture.png
+├── diagrams/
+│   └── architecture.png
+└── documentation/
+    ├── A-tenant-setup-&-user-management/
+    |     ├── Microsoft 365 Developer Tenant (free, 25 licenses)
+    |     ├── Azure Free Account activated
+    |     ├── Domain configured (faiziit.onmicrosoft.com)
+    |     ├── 10 test users created with different roles
+    |     ├── Licenses assigned (M365 Business Premium, E5 Developer)
+    |     └── Dynamic groups configured (department/location-based)
+    ├── B-security-&-Identity/
+    |     ├── MFA enforced for all admins
+    |     ├── Conditional Access — block non-EU countries
+    |     ├── Conditional Access — require MFA for all cloud apps
+    |     ├── Conditional Access — requires a compliant device for sensitive data
+    |     ├── Self-Service Password Reset (SSPR) enabled
+    |     ├── Azure AD Identity Protection configured
+    |     └── Risk-based policies (high risk = force password change)
+    ├── C-intune-device-management/
+    |     ├──  Windows 11 enrollment configured (Autopilot-ready)
+    |     ├── Device compliance policies (BitLocker, Defender, Windows Update)
+    |     ├── App deployment (M365 Apps, Chrome, Acrobat Reader)
+    |     └── Configuration profiles (Wi-Fi, VPN, branding wallpaper)
+    └── D-exchange-online-&-collaboration/
+          ├── Shared mailboxes (support@, info@, sales@)
+          ├── Email aliases configured
+          ├── Transport rules (disclaimer, external email warning)
+          └── Microsoft Teams structure with channels
+
 ```
 
 ---
