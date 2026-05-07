@@ -1,10 +1,14 @@
 # Setup Guide — M365 Tenant + Azure AD from Scratch
 
+> **About this document:** This is a general reference guide covering all configuration steps for a Microsoft 365 + Azure AD environment. It is intended as a structured walkthrough and decision-making reference. For the actual implementation of this project — including screenshots and real configuration choices made for Faizi-IT BV — see the step-by-step documentation in the `/documentation/` folder.
+
 > Follow these steps in order. Each section assumes the previous one is complete.
 
 ---
 
 ## Step 1 — Create the Microsoft 365 Tenant
+
+> **Recommended for labs:** Use the **Microsoft 365 Developer Program** (free, 25 E5 licences, 90-day renewable) instead of a paid trial. Sign up at [developer.microsoft.com/microsoft-365/dev-program](https://developer.microsoft.com/en-us/microsoft-365/dev-program). This is the approach used in this project — see [A.1 Tenant Overview](documentation/A-tenant-setup-%26-user-management/tenant-overview.md) for the actual implementation steps. The commercial sign-up steps below apply if you are setting up a paid production tenant.
 
 ### 1.1 Sign Up
 
