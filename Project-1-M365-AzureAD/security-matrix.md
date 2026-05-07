@@ -32,7 +32,9 @@ Choose **one approach** per tenant. They cannot coexist.
 | CA003 | Require MFA for admins | Directory roles (all admin roles) | All cloud apps | — | Require MFA | On |
 | CA004 | Block sign-in from high-risk countries | All users | All cloud apps | Locations = excluded named locations | Block | On |
 | CA005 | Require compliant device for admins | Directory roles (admin) | All cloud apps | — | Require MFA + Require compliant device | On |
-| CA006 | Guest MFA requirement | Guest users | All cloud apps | — | Require MFA | On |
+| CA006 | Guest MFA requirement | Guest users | All cloud apps | — | Require MFA | Planned |
+
+> **CA006 status:** This policy is planned for implementation during Section B of the project, once the Conditional Access baseline (CA001–CA005) has been validated in report-only mode. It will be configured and documented in `B-security-&-Identity/mfa-and-conditional-access.md`.
 
 ### Named Locations
 
@@ -63,7 +65,7 @@ Configure at **Entra Admin Center → Protection → Authentication methods → 
 
 | Setting | Recommended Value | Location |
 |---|---|---|
-| **Minimum password length** | 12 characters | Entra ID → Password reset → Password policies |
+| **Minimum password length** | 8 characters (Azure AD default) | Azure AD enforces a minimum of 8 for cloud-only accounts; this cannot be raised via portal settings alone — use Custom Banned Passwords to improve quality instead |
 | **Password complexity** | Enabled (upper, lower, digit, symbol) | Azure AD default |
 | **Password expiration** | Never (with MFA enforced) | Microsoft's current recommendation |
 | **Smart lockout threshold** | 10 attempts | Entra ID → Security → Authentication methods → Password protection |
@@ -72,7 +74,9 @@ Configure at **Entra Admin Center → Protection → Authentication methods → 
 | **Self-service password reset** | Enabled for all users | Protection → Password reset |
 | **SSPR authentication methods** | 2 required | Protection → Password reset |
 
-> 📌 **Note**: Microsoft no longer recommends mandatory periodic password rotation when MFA is enforced. Forced password resets lead to predictable patterns (e.g. `Password1!` → `Password2!`). Use SSPR + breach detection (Identity Protection) instead.
+> 📌 **Note on password length:** Azure AD cloud-only accounts enforce a minimum of 8 characters by default. Unlike on-premises Active Directory (where fine-grained password policies can set higher minimums), Azure AD does not currently expose a portal control to raise this minimum above 8 for cloud accounts. The most effective way to improve password quality is to enable **Custom Banned Passwords** (blocking common and company-specific words) combined with MFA enforcement and **Identity Protection** breach detection.
+
+> 📌 **Note on expiration:** Microsoft no longer recommends mandatory periodic password rotation when MFA is enforced. Forced password resets lead to predictable patterns (e.g. `Password1!` → `Password2!`). Use SSPR + breach detection (Identity Protection) instead.
 
 ---
 
