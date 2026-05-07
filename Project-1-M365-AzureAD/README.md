@@ -94,39 +94,30 @@ Faizi-IT BV — Microsoft 365 Tenant ()
 ## Folder Structure
 
 ```
+
 Project-1-M365-AzureAD/
-├── README.md               ← This file
-├── setup-guide.md          ← Step-by-step implementation
-├── security-matrix.md      ← Policy overview
-├── troubleshooting.md      ← Issues & solutions
+├── README.md                          ← You are here
+├── setup-guide.md                     ← Full step-by-step implementation walkthrough
+├── security-matrix.md                 ← All security policies and controls in one place
+├── troubleshooting.md                 ← Issues encountered and how they were resolved
 ├── diagrams/
-│   └── architecture.png
+│   └── architecture.svg              ← Tenant architecture diagram
 └── documentation/
     ├── A-tenant-setup-&-user-management/
-    |     ├── Microsoft 365 Developer Tenant (free, 25 licenses)
-    |     ├── Azure Free Account activated
-    |     ├── Domain configured (faiziit.onmicrosoft.com)
-    |     ├── 10 test users created with different roles
-    |     ├── Licenses assigned (M365 Business Premium, E5 Developer)
-    |     └── Dynamic groups configured (department/location-based)
+    │   ├── tenant-overview.md         ← Tenant creation, domain, licences
+    │   ├── user-accounts.md           ← 10 test users, roles, and departments
+    │   └── dynamic-groups.md         ← Dynamic group rules and membership logic
     ├── B-security-&-Identity/
-    |     ├── MFA enforced for all admins
-    |     ├── Conditional Access — block non-EU countries
-    |     ├── Conditional Access — require MFA for all cloud apps
-    |     ├── Conditional Access — requires a compliant device for sensitive data
-    |     ├── Self-Service Password Reset (SSPR) enabled
-    |     ├── Azure AD Identity Protection configured
-    |     └── Risk-based policies (high risk = force password change)
+    │   ├── mfa-and-conditional-access.md   ← MFA setup and 3 CA policies
+    │   └── sspr-and-identity-protection.md ← SSPR config and risk-based policies
     ├── C-intune-device-management/
-    |     ├──  Windows 11 enrollment configured (Autopilot-ready)
-    |     ├── Device compliance policies (BitLocker, Defender, Windows Update)
-    |     ├── App deployment (M365 Apps, Chrome, Acrobat Reader)
-    |     └── Configuration profiles (Wi-Fi, VPN, branding wallpaper)
+    │   ├── enrollment-and-compliance.md    ← Autopilot + compliance policies
+    │   ├── app-deployment.md              ← Required app deployment via Intune
+    │   └── configuration-profiles.md     ← Wi-Fi, VPN, branding profiles
     └── D-exchange-online-&-collaboration/
-          ├── Shared mailboxes (support@, info@, sales@)
-          ├── Email aliases configured
-          ├── Transport rules (disclaimer, external email warning)
-          └── Microsoft Teams structure with channels
+        ├── shared-mailboxes.md            ← Shared mailboxes and aliases
+        ├── transport-rules.md             ← Disclaimer and warning rules
+        └── teams-structure.md            ← Teams and channel configuration
 
 ```
 
