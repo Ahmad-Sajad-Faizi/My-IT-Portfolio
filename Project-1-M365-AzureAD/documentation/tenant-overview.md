@@ -37,14 +37,14 @@ The Microsoft 365 Developer Program provides a free sandbox environment with **2
    - **Areas of interest:** Microsoft Graph, Microsoft Identity platform, Microsoft Teams, Outlook, Power Platform
    - **Country/Region:** Belgium
 
-   ![Developer Program Signup — Profile]("Project-1-M365-AzureAD/documentation/media/Pasted image 20260507172108.png")
-   ![Developer Program — Focus Areas]("Project-1-M365-AzureAD/documentation/media/Pasted image 20260507172127.png")
-   ![Developer Program — Interests]("Project-1-M365-AzureAD/documentation/media/Pasted image 20260507172135.png")
-   ![Developer Program — Phone Verification]("Project-1-M365-AzureAD/documentation/media/Pasted image 20260507172145.png")
+   ![Developer Program Signup — Profile]("Project-1-M365-AzureAD/documentation/media/Pasted%20image%2020260507172108.png")
+   ![Developer Program — Focus Areas]("Project-1-M365-AzureAD/documentation/media/Pasted%20image%2020260507172127.png")
+   ![Developer Program — Interests]("Project-1-M365-AzureAD/documentation/media/Pasted%20image%2020260507172135.png")
+   ![Developer Program — Phone Verification]("Project-1-M365-AzureAD/documentation/media/Pasted%20image%2020260507172145.png")
 
 4. After verification, the tenant dashboard loads. The subscription is provisioned automatically.
 
-   ![Developer Program — Welcome Dashboard]("Project-1-M365-AzureAD/documentation/media/Pasted image 20260507172213.png")
+   ![Developer Program — Welcome Dashboard]("Project-1-M365-AzureAD/documentation/media/Pasted%20image%2020260507172213.png")
 
 ### 3.2 Subscribe to Microsoft 365 Business Premium
 
@@ -59,16 +59,16 @@ To simulate a realistic SMB environment, a **Microsoft 365 Business Premium** tr
    - **Domain:** FaiziITLab
    - **Full domain:** `Ahmad@FaiziITLab.onmicrosoft.com`
 
-   ![[Project-1-M365-AzureAD/documentation/media/Pasted image 20260507172242.png]]
-   ![[Project-1-M365-AzureAD/documentation/media/Pasted image 20260507172258.png]]
-   ![[Project-1-M365-AzureAD/documentation/media/Pasted image 20260507172306.png]]
-   ![[Project-1-M365-AzureAD/documentation/media/Pasted image 20260507172316.png]]
-   ![[Project-1-M365-AzureAD/documentation/media/Pasted image 20260507172343.png]]
+   ![Business Premium — Trial Selection]("Project-1-M365-AzureAD/documentation/media/Pasted%20image%2020260507172242.png")
+   ![Business Premium — Sign-in Details]("Project-1-M365-AzureAD/documentation/media/Pasted%20image%2020260507172258.png")
+   ![Business Premium — Account Setup]("Project-1-M365-AzureAD/documentation/media/Pasted%20image%2020260507172306.png")
+   ![Business Premium — Organisation Details]("Project-1-M365-AzureAD/documentation/media/Pasted%20image%2020260507172316.png")
+   ![Business Premium — Username Configuration]("Project-1-M365-AzureAD/documentation/media/Pasted%20image%2020260507172343.png")
 
 4. Review the order summary and confirm. The tenant is now dual-licenced (E5 Developer + Business Premium).
 
-   ![[Pasted image 20260507172356.png]]
-   ![[Project-1-M365-AzureAD/documentation/media/Pasted image 20260507172410.png]]
+   ![Business Premium — Order Review]("Project-1-M365-AzureAD/documentation/media/Pasted%20image%2020260507172356.png")
+   ![Business Premium — Confirmation]("Project-1-M365-AzureAD/documentation/media/Pasted%20image%2020260507172410.png")
 
 ### 3.3 Secure the Global Administrator Account
 
@@ -81,17 +81,17 @@ Immediately after tenant creation, MFA was enforced on the Global Admin account 
 3. Scan the QR code displayed on screen with the mobile app.
 4. Confirm the Authenticator is added and set as the default sign-in method.
 
-   ![[Project-1-M365-AzureAD/documentation/media/Pasted image 20260507172423.png]]
-   ![[Project-1-M365-AzureAD/documentation/media/Pasted image 20260507172434.png]]
-   ![[Project-1-M365-AzureAD/documentation/media/Pasted image 20260507172443.png]]
-   ![[Project-1-M365-AzureAD/documentation/media/Pasted image 20260507172452.png]]
-   ![[Project-1-M365-AzureAD/documentation/media/Pasted image 20260507172501.png]]
-   ![[Project-1-M365-AzureAD/documentation/media/Pasted image 20260507172512.png]]
+   ![MFA Setup — Add Security]("Project-1-M365-AzureAD/documentation/media/Pasted%20image%2020260507172423.png")
+   ![MFA Setup — Install Authenticator]("Project-1-M365-AzureAD/documentation/media/Pasted%20image%2020260507172434.png")
+   ![MFA Setup — Configure in App]("Project-1-M365-AzureAD/documentation/media/Pasted%20image%2020260507172443.png")
+   ![MFA Setup — Scan QR Code]("Project-1-M365-AzureAD/documentation/media/Pasted%20image%2020260507172452.png")
+   ![MFA Setup — Authenticator Added]("Project-1-M365-AzureAD/documentation/media/Pasted%20image%2020260507172501.png")
+   ![MFA Setup — Stay Signed In]("Project-1-M365-AzureAD/documentation/media/Pasted%20image%2020260507172512.png")
 
 5. Sign in to the **Microsoft 365 admin center** (`admin.microsoft.com`) to verify tenant health.
 
-   ![[Project-1-M365-AzureAD/documentation/media/Pasted image 20260507172522.png]]
-   ![[Project-1-M365-AzureAD/documentation/media/Pasted image 20260507172531.png]]
+   ![Admin Center — First Login]("Project-1-M365-AzureAD/documentation/media/Pasted%20image%2020260507172522.png")
+   ![Admin Center — Dashboard]("Project-1-M365-AzureAD/documentation/media/Pasted%20image%2020260507172531.png")
 
 ---
 
