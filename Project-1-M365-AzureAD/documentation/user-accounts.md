@@ -55,7 +55,7 @@ The Global Admin account was created automatically during tenant signup (see [A.
    - First name: Sarah
    - Last name: Mitchell
    - Display name: Sarah Mitchell
-   - Username: `smitchell`
+   - Username: `s.mitchell`
    - Domain: `faiziitlab.onmicrosoft.com`
    - Automatically create a password: **Enabled**
    - Require password change at next sign-in: **Enabled**
@@ -64,13 +64,12 @@ The Global Admin account was created automatically during tenant signup (see [A.
 3. **Assign product licences:**
    - Select location: **Belgium**
    - Assign: **Microsoft 365 Business Premium**
-   - Create user without product licence: **Unchecked**
+   - Create user with product licence: **checked**
    ![Add User — Sarah Mitchell Licences](media/Pasted%20image%2020260507194316.png)
    ![Add User — Sarah Mitchell Licence Confirm](media/Pasted%20image%2020260507194340.png)
 
 4. **Optional settings — Roles:**
    - Select role: **User Administrator**
-   - Admin center access: Limited (only user management)
    ![Add User — Sarah Mitchell Roles](media/Pasted%20image%2020260507194407.png)
    ![Add User — Sarah Mitchell Optional Settings](media/Pasted%20image%2020260507194455.png)
 
@@ -93,7 +92,7 @@ The Global Admin account was created automatically during tenant signup (see [A.
    - First name: James
    - Last name: Kowalski
    - Display name: James Kowalski
-   - Username: `jkowalski`
+   - Username: `j.kowalski`
    ![Add User — James Kowalski Basics](media/Pasted%20image%2020260507194648.png)
 
 2. **Assign product licences:**
@@ -119,7 +118,7 @@ The Global Admin account was created automatically during tenant signup (see [A.
    - First name: Emma
    - Last name: Larsson
    - Display name: Emma Larsson
-   - Username: `elarsson`
+   - Username: `e.larsson`
    ![Add User — Emma Larsson Basics](media/Pasted%20image%2020260507194733.png)
 
 2. **Assign product licences:**
@@ -145,7 +144,7 @@ The Global Admin account was created automatically during tenant signup (see [A.
    - First name: David
    - Last name: Okonkwo
    - Display name: David Okonkwo
-   - Username: `dokonkwo`
+   - Username: `d.okonkwo`
    ![Add User — David Okonkwo Basics](media/Pasted%20image%2020260507195234.png)
 
 2. **Assign product licences:**
@@ -171,7 +170,7 @@ The Global Admin account was created automatically during tenant signup (see [A.
    - First name: Lisa
    - Last name: Vandenberg
    - Display name: Lisa Vandenberg
-   - Username: `lvandenberg`
+   - Username: `l.vandenberg`
    ![Add User — Lisa Vandenberg Basics](media/Pasted%20image%2020260507195314.png)
 
 2. **Assign product licences:**
@@ -197,7 +196,7 @@ The Global Admin account was created automatically during tenant signup (see [A.
    - First name: Marco
    - Last name: Rossi
    - Display name: Marco Rossi
-   - Username: `mrossi`
+   - Username: `m.rossi`
    ![Add User — Marco Rossi Basics](media/Pasted%20image%2020260507233436.png)
 
 2. **Assign product licences:**
@@ -223,7 +222,7 @@ The Global Admin account was created automatically during tenant signup (see [A.
    - First name: Fatima
    - Last name: Al-Hassan
    - Display name: Fatima Al-Hassan
-   - Username: `falhassan`
+   - Username: `f.alhassan`
    ![Add User — Fatima Al-Hassan Basics](media/Pasted%20image%2020260507195451.png)
 
 2. **Assign product licences:**
@@ -249,7 +248,7 @@ The Global Admin account was created automatically during tenant signup (see [A.
    - First name: Thomas
    - Last name: Berger
    - Display name: Thomas Berger
-   - Username: `tberger`
+   - Username: `t.berger`
    - No licence assigned (Guest users consume no paid licences)
    - Select role: **Guest Inviter**
    ![Add User — Thomas Berger Set up](media/Pasted%20image%2020260507232415.png)
@@ -267,7 +266,7 @@ The Global Admin account was created automatically during tenant signup (see [A.
    - First name: Yuki
    - Last name: Tanaka
    - Display name: Yuki Tanaka
-   - Username: `ytanaka`
+   - Username: `y.tanaka`
    - No licence assigned
    - Select role: **Guest Inviter** 
    ![Add User — Yuki Tanaka Set up](media/Pasted%20image%2020260507232957.png)
@@ -287,15 +286,15 @@ After all accounts were created, the **Active users** page in the Microsoft 365 
 | #   | Display Name     | UPN                                    | Role                 | Licence          | Status   |
 | --- | ---------------- | -------------------------------------- | -------------------- | ---------------- | -------- |
 | 1   | Ahmad Faizi      | ahmad@faiziitlab.onmicrosoft.com       | Global Administrator | Business Premium | ✅ Active |
-| 2   | Sarah Mitchell   | smitchell@faiziitlab.onmicrosoft.com   | User Administrator   | Business Premium | ✅ Active |
-| 3   | James Kowalski   | jkowalski@faiziitlab.onmicrosoft.com   | User Administrator   | Business Premium | ✅ Active |
-| 4   | Emma Larsson     | elarsson@faiziitlab.onmicrosoft.com    | Standard User        | Business Premium | ✅ Active |
-| 5   | David Okonkwo    | dokonkwo@faiziitlab.onmicrosoft.com    | Standard User        | Business Premium | ✅ Active |
-| 6   | Lisa Vandenberg  | lvandenberg@faiziitlab.onmicrosoft.com | Standard User        | Business Premium | ✅ Active |
-| 7   | Marco Rossi      | mrossi@faiziitlab.onmicrosoft.com      | Standard User        | Business Premium | ✅ Active |
-| 8   | Fatima Al-Hassan | falhassan@faiziitlab.onmicrosoft.com   | Standard User        | Business Premium | ✅ Active |
-| 9   | Thomas Berger    | tberger@faiziitlab.onmicrosoft.com     | Guest User           | —                | ✅ Active |
-| 10  | Yuki Tanaka      | ytanaka@faiziitlab.onmicrosoft.com     | Guest User           | —                | ✅ Active |
+| 2   | Sarah Mitchell   | s.mitchell@faiziitlab.onmicrosoft.com   | User Administrator   | Business Premium | ✅ Active |
+| 3   | James Kowalski   | j.kowalski@faiziitlab.onmicrosoft.com   | User Administrator   | Business Premium | ✅ Active |
+| 4   | Emma Larsson     | e.larsson@faiziitlab.onmicrosoft.com    | Standard User        | Business Premium | ✅ Active |
+| 5   | David Okonkwo    | d.okonkwo@faiziitlab.onmicrosoft.com    | Standard User        | Business Premium | ✅ Active |
+| 6   | Lisa Vandenberg  | l.vandenberg@faiziitlab.onmicrosoft.com | Standard User        | Business Premium | ✅ Active |
+| 7   | Marco Rossi      | m.rossi@faiziitlab.onmicrosoft.com      | Standard User        | Business Premium | ✅ Active |
+| 8   | Fatima Al-Hassan | f.alhassan@faiziitlab.onmicrosoft.com   | Standard User        | Business Premium | ✅ Active |
+| 9   | Thomas Berger    | t.berger@faiziitlab.onmicrosoft.com     | Guest User           | —                | ✅ Active |
+| 10  | Yuki Tanaka      | y.tanaka@faiziitlab.onmicrosoft.com     | Guest User           | —                | ✅ Active |
 
 ---
 
