@@ -187,7 +187,7 @@ The complete group structure in the Microsoft Entra admin center shows all 9 gro
 | 8 | **Marketing Team** | Security | **Dynamic** | Marketing campaigns |
 | 9 | **Sales Team** | Security | **Dynamic** | Sales tools & CRM access |
 
-&gt; **Key insight:** Microsoft 365 groups (created in the M365 admin center) support **Assigned** membership only. For dynamic membership, **Security** groups must be created in the **Microsoft Entra admin center**. The `IT Department` group exists as both types — a Microsoft 365 group for Teams collaboration and would need a separate Security group for policy targeting.
+> **Key insight:** Microsoft 365 groups (created in the M365 admin center) support **Assigned** membership only. For dynamic membership, **Security** groups must be created in the **Microsoft Entra admin center**. The `IT Department` group exists as both types — a Microsoft 365 group for Teams collaboration and would need a separate Security group for policy targeting.
 
 ---
 
