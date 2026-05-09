@@ -167,20 +167,27 @@ This group targets all users with an active Microsoft 365 Business Premium licen
 
 ---
 
-## 5. Existing Groups vs. New Dynamic Groups
+## 5. All Groups Overview
 
-During the project, two types of groups were created:
+The complete group structure in the Microsoft Entra admin center shows all 9 groups:
 
-| Group | Type | Membership | Created In | Purpose |
-|-------|------|-----------|------------|---------|
-| **All Company** | Microsoft 365 | Assigned | M365 admin center | Teams collaboration |
-| **Faizi IT Lab** | Microsoft 365 | Assigned | M365 admin center | Team workspace |
-| **IT Department** | Microsoft 365 | Assigned | M365 admin center | Team collaboration |
-| **EU Employees** | Security | **Dynamic** | Entra admin center | Conditional Access targeting |
-| **IT Department** | Security | **Dynamic** | Entra admin center | Policy & resource access |
-| **Development Team** | Security | **Dynamic** | Entra admin center | Dev resource access |
+![All Groups — Entra Admin Center](media/)
 
-> **Important:** Microsoft 365 groups (created in the M365 admin center) support **Assigned** membership only. For dynamic membership, **Security** groups must be created in the **Microsoft Entra admin center**.
+### 5.1 Group Summary
+
+| # | Group Name | Group Type | Membership | Purpose |
+|---|-----------|-----------|-----------|---------|
+| 1 | **All Company** | Microsoft 365 | Assigned | Org-wide Teams collaboration |
+| 2 | **Development Team** | Security | **Dynamic** | Dev team resources |
+| 3 | **EU Employees** | Security | **Dynamic** | Conditional Access targeting |
+| 4 | **Faizi IT Lab** | Microsoft 365 | Assigned | Team workspace |
+| 5 | **Group for Answers in Viva Engage** | Microsoft 365 | Assigned | System group (auto-created) |
+| 6 | **HR Department** | Security | **Dynamic** | HR tools & confidential data |
+| 7 | **IT Department** | Microsoft 365 | Assigned | Team collaboration |
+| 8 | **Marketing Team** | Security | **Dynamic** | Marketing campaigns |
+| 9 | **Sales Team** | Security | **Dynamic** | Sales tools & CRM access |
+
+&gt; **Key insight:** Microsoft 365 groups (created in the M365 admin center) support **Assigned** membership only. For dynamic membership, **Security** groups must be created in the **Microsoft Entra admin center**. The `IT Department` group exists as both types — a Microsoft 365 group for Teams collaboration and would need a separate Security group for policy targeting.
 
 ---
 
@@ -190,16 +197,16 @@ After creation, verify membership by navigating to **Microsoft Entra admin cente
 
 ### 6.1 Membership Summary
 
-| Group | Rule | Expected Members | Status |
-|-------|------|-----------------|--------|
-| All Company | `accountEnabled -eq true` | 8 internal users | ✅ Dynamic |
-| IT Department | `department -eq "IT"` | 3 users | ✅ Dynamic |
+| Group | Rule | Members | Status |
+|-------|------|---------|--------|
+| All Company | `accountEnabled -eq true` | 8 internal users | ✅ Assigned |
 | Development Team | `department -eq "Development"` | 2 users | ✅ Dynamic |
+| EU Employees | `usageLocation -eq "BE"` | 8 internal users | ✅ Dynamic |
+| Faizi IT Lab | — | Team workspace | ✅ Assigned |
+| HR Department | `department -eq "HR"` | 1 user | ✅ Dynamic |
+| IT Department | `department -eq "IT"` | 3 users | ✅ Dynamic |
 | Marketing Team | `department -eq "Marketing"` | 1 user | ✅ Dynamic |
 | Sales Team | `department -eq "Sales"` | 1 user | ✅ Dynamic |
-| HR Department | `department -eq "HR"` | 1 user | ✅ Dynamic |
-| EU Employees | `usageLocation -eq "BE"` | 8 internal users | ✅ Dynamic |
-| Licensed Users | `assignedPlans` contains Business Premium | 8 users | ✅ Dynamic |
 
 ---
 
