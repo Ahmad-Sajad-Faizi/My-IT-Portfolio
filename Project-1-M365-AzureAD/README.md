@@ -55,7 +55,7 @@ Faizi-IT BV — Microsoft 365 Tenant ()
 - [x] Domain configured (faiziitlab.onmicrosoft.com)
 - [x] 10 test users created with different roles
 - [x] Licenses assigned (M365 Business Premium, E5 Developer)
-- [ ] Dynamic groups configured (department/location based)
+- [x] Dynamic groups configured (department/location based)
 
 ### B. Security & Identity
 - [ ] MFA enforced for all admins
