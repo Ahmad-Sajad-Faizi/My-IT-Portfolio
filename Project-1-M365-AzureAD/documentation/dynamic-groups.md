@@ -74,7 +74,7 @@ This group is critical for the **Conditional Access policy** that blocks non-EU 
    - **Membership type:** Dynamic User
    - **Microsoft Entra roles can be assigned to the group:** No
 
-   ![[media/Pasted image 20260509233311.png]]
+   ![New Group — EU Employees Configuration](media/Pasted%20image%2020260509233311.png)
 
 4. Click **Edit dynamic query**.
 
@@ -84,20 +84,20 @@ This group is critical for the **Conditional Access policy** that blocks non-EU 
    - **Value:** BE
    - **Rule syntax:** `(user.usageLocation -eq "BE")`
 
-   ![[media/Pasted image 20260509233352.png]]
+   ![Dynamic Membership Rules — EU Employees Rule](media/Pasted%20image%2020260509233352.png)
 
 6. Click **Validate** to test the rule against existing users, then **Save**.
 
 7. Click **Create** to finalize the group.
 
-   ![[media/Pasted image 20260509233419.png]]
+   ![Successfully Created Group](media/Pasted%20image%2020260509233419.png)
 
 8. The group overview page confirms the configuration:
    - **Membership type:** Dynamic
    - **Type:** Security
    - **Created on:** 09/05/2026
 
-   ![[media/Pasted image 20260509233445.png]]
+   ![EU Employees Group Overview](media/Pasted%20image%2020260509233445.png)
 
 > **Note:** The member count shows **0** immediately after creation because dynamic group membership evaluation takes time to process. After the rule is evaluated (typically within a few minutes to 24 hours), all internal users with `usageLocation = BE` will be automatically added.
 
