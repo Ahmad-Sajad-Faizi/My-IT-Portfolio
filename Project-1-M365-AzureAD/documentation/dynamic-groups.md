@@ -171,7 +171,7 @@ This group targets all users with an active Microsoft 365 Business Premium licen
 
 The complete group structure in the Microsoft Entra admin center shows all 9 groups:
 
-![All Groups — Entra Admin Center](media/)
+![All Groups — Entra Admin Center](media/Screenshot%202026-05-10%20001237.png)
 
 ### 5.1 Group Summary
 
