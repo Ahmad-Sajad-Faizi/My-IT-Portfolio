@@ -58,13 +58,13 @@ Faizi-IT BV — Microsoft 365 Tenant ()
 - [x] Dynamic groups configured (department/location based)
 
 ### B. Security & Identity
-- [ ] MFA enforced for all admins
-- [ ] Conditional Access — block non-EU countries
-- [ ] Conditional Access — require MFA for all cloud apps
-- [ ] Conditional Access — require a compliant device for sensitive data
-- [ ] Self-Service Password Reset (SSPR) enabled
-- [ ] Azure AD Identity Protection configured
-- [ ] Risk-based policies (high risk = force password change)
+- [x] MFA enforced for all admins
+- [x] Conditional Access — block non-EU countries
+- [x] Conditional Access — require MFA for all cloud apps
+- [x] Conditional Access — require a compliant device for sensitive data
+- [x] Self-Service Password Reset (SSPR) enabled
+- [x] Azure AD Identity Protection configured
+- [x] Risk-based policies (high risk = force password change)
 
 ### C. Intune Device Management
 - [ ] Windows 11 enrollment configured (Autopilot-ready)
