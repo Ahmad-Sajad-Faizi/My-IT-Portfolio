@@ -1,6 +1,6 @@
 # Enrollment & Compliance Policies
 
-> **Lab Environment:** Microsoft 365 Business Premium — *faizi IT Lab tenant*  
+> **Lab Environment:** Microsoft 365 Business Premium — *Faizi-IT BV tenant*  
 > **Focus:** Windows Autopilot enrollment, device compliance policies, and the Enrollment Status Page (ESP) configuration.
 
 ---
