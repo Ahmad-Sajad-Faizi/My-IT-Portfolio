@@ -352,6 +352,8 @@ Created a dedicated **Microsoft Defender Antivirus** policy for granular securit
 
 ### 7.2 Defender Configuration Settings
 
+All other settings left at Microsoft default.
+
 | Setting | Value |
 |---------|-------|
 | **Allow Archive Scanning** | Not configured |
