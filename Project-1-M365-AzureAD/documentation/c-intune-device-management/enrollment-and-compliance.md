@@ -1,6 +1,6 @@
 # Enrollment & Compliance Policies
 
-> **Lab Environment:** Microsoft 365 Business Premium — *Fazi IT Lab tenant*  
+> **Lab Environment:** Microsoft 365 Business Premium — *faizi IT Lab tenant*  
 > **Focus:** Windows Autopilot enrollment, device compliance policies, and the Enrollment Status Page (ESP) configuration.
 
 ---
@@ -214,4 +214,4 @@ Configured device categories for organizational grouping (if applicable in tenan
 
 ---
 
-*Lab completed: Microsoft Intune tenant (Fazi IT Lab) with Windows enrollment and compliance policies configured.*
+*Lab completed: Microsoft Intune tenant (faizi IT Lab) with Windows enrollment and compliance policies configured.*
