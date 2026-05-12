@@ -1,6 +1,6 @@
 # App Deployment via Intune
 
-> **Lab Environment:** Microsoft 365 Business Premium — *Fazi IT Lab tenant*  
+> **Lab Environment:** Microsoft 365 Business Premium — *faizi-IT BV tenant*  
 > **Focus:** Deploying required applications through Microsoft Intune using Win32 app packaging and Microsoft 365 Apps.
 
 ---
@@ -243,4 +243,4 @@ Configured app selective wipe capabilities for managed apps.
 
 ---
 
-*Lab completed: Microsoft Intune tenant (Fazi IT Lab) with Microsoft 365 Apps and Win32 app deployments configured.*
+*Lab completed: Microsoft Intune tenant (faizi-IT BV) with Microsoft 365 Apps and Win32 app deployments configured.*
