@@ -6,6 +6,19 @@
 
 ---
 
+## About This Project
+
+This project demonstrates the end-to-end administration of a Microsoft 365 environment 
+built from scratch for a fictional company, **Faizi-IT BV**. It covers cloud identity 
+management with Azure AD / Entra ID, device enrollment and security hardening via 
+Microsoft Intune, and collaboration services through Exchange Online and Microsoft Teams 
+— all configured on free-tier licenses at €0 cost.
+
+> The Microsoft 365 tenant is named **Fazi IT Lab** throughout some of the screenshots, 
+> reflecting the lab environment used during configuration.
+
+---
+
 ##  Objective
 
 As an IT support professional, managing a full Microsoft 365 environment — including users, devices, and security — is a core competency. This project simulates a real-world scenario where a new company is set up in the cloud from scratch.
