@@ -1,6 +1,6 @@
 # Configuration Profiles
 
-> **Lab Environment:** Microsoft 365 Business Premium — *Fazi IT Lab tenant*  
+> **Lab Environment:** Microsoft 365 Business Premium — *faizi IT Lab tenant*  
 > **Focus:** Wi-Fi auto-connect, certificate-based VPN with custom Linux VPN server, and endpoint security baselines via Microsoft Intune.
 
 ---
@@ -45,7 +45,7 @@ Configured the wireless network parameters:
 | Setting | Value |
 |---------|-------|
 | **Wi-Fi type** | Basic |
-| **Network name (SSID)** | `FAZI-CORP-WIFI` |
+| **Network name (SSID)** | `faizi-CORP-WIFI` |
 | **Connect automatically when in range** | Yes |
 | **Connect to more preferred network if available** | No |
 | **Connect to this network, even when it is not broadcasting its SSID to SSD** | Yes |
@@ -53,10 +53,10 @@ Configured the wireless network parameters:
 | **Wireless Security Type** | WPA2/WPA3-Enterprise |
 | **EAP type** | EAP-TLS (certificate-based) |
 | **Authentication method** | Certificate |
-| **Trusted server certificate names** | `FAZI-CORP-ROOT` |
-| **Root certificates for server validation** | FaziRootCA.cer |
+| **Trusted server certificate names** | `faizi-CORP-ROOT` |
+| **Root certificates for server validation** | faiziRootCA.cer |
 | **Authentication method (client)** | Certificate |
-| **Client certificate (outer identity)** | FaziRootCA.cer |
+| **Client certificate (outer identity)** | faiziRootCA.cer |
 
 ![Wi-Fi Configuration Settings](assets/configuration-profiles/image5.png)
 
@@ -84,14 +84,14 @@ Reviewed the complete Wi-Fi profile configuration before deployment.
 
 ### 3.1 Creating the Trusted Certificate Profile
 
-Created a **Trusted certificate** profile to deploy the Fazi IT Lab root CA to managed devices for VPN server validation.
+Created a **Trusted certificate** profile to deploy the faizi IT Lab root CA to managed devices for VPN server validation.
 
 ![Create Trusted Certificate Profile](assets/configuration-profiles/image25.png)
 
 **Profile Details:**
 | Attribute | Value |
 |-----------|-------|
-| **Name** | Fazi Root CA |
+| **Name** | faizi Root CA |
 | **Description** | Root CA for VPN and Wi-Fi certificate validation |
 | **Platform** | Windows 10 and later |
 | **Profile type** | Trusted certificate |
@@ -102,7 +102,7 @@ Created a **Trusted certificate** profile to deploy the Fazi IT Lab root CA to m
 
 | Setting | Value |
 |---------|-------|
-| **Certificate file** | `FaziRootCA.cer` |
+| **Certificate file** | `faiziRootCA.cer` |
 | **Destination store** | Computer certificate store - Root |
 
 ![Trusted Certificate Settings](assets/configuration-profiles/image27.png)
@@ -139,7 +139,7 @@ conn ikev2-vpn
     dpddelay=300s
     rekey=no
     left=%any
-    leftid=@vpn.fazi.ovh
+    leftid=@vpn.faizi.ovh
     leftcert=server-cert.pem
     leftsendcert=always
     leftsubnet=0.0.0.0/0
@@ -183,9 +183,9 @@ sudo ipsec restart
 
 ### 4.4 Root CA Certificate
 
-Generated and exported the **FaziRootCA.cer** certificate for Intune deployment.
+Generated and exported the **faiziRootCA.cer** certificate for Intune deployment.
 
-![FaziRootCA Certificate](assets/configuration-profiles/image24.png)
+![faiziRootCA Certificate](assets/configuration-profiles/image24.png)
 
 ---
 
@@ -200,7 +200,7 @@ Created a new **VPN** profile in Intune for IKEv2 certificate-based remote acces
 **Profile Details:**
 | Attribute | Value |
 |-----------|-------|
-| **Name** | FAZI-REMOTE-VPN |
+| **Name** | faizi-REMOTE-VPN |
 | **Description** | IKEv2 certificate-based VPN for remote workers |
 | **Platform** | Windows 10 and later |
 | **Profile type** | VPN |
@@ -212,13 +212,13 @@ Created a new **VPN** profile in Intune for IKEv2 certificate-based remote acces
 | Setting | Value |
 |---------|-------|
 | **Connection type** | IKEv2 |
-| **Connection name** | FAZI-REMOTE-VPN |
-| **VPN server address** | `vpn.fazi.ovh` |
+| **Connection name** | faizi-REMOTE-VPN |
+| **VPN server address** | `vpn.faizi.ovh` |
 | **Authentication method** | Certificates |
 | **Remember credentials at each logon** | Yes |
 | **Always-on VPN** | Disabled (user-initiated) |
 | **Device tunnel** | Disabled |
-| **DNS suffix search list** | `fazi.ovh` |
+| **DNS suffix search list** | `faizi.ovh` |
 
 ![VPN Configuration Settings](assets/configuration-profiles/image33.png)
 
@@ -226,7 +226,7 @@ Created a new **VPN** profile in Intune for IKEv2 certificate-based remote acces
 
 | Setting                | Value                            |
 | ---------------------- | -------------------------------- |
-| **DNS suffixes**       | `fazi.ovh`, `domain.contoso.com` |
+| **DNS suffixes**       | `faizi.ovh`, `domain.contoso.com` |
 | **Split tunneling**    | Enable                           |
 | **Destination prefix** | 192.168.100.0                    |
 | **Prefix size**        | 24                               |
@@ -406,8 +406,8 @@ Reviewed the complete list of deployed configuration profiles in the Intune admi
 | Profile Name | Platform | Profile Type | Last Modified |
 |-------------|----------|-------------|---------------|
 | INT-WLAN-Global | Windows 10 and later | Wi-Fi | 12/05/2026 |
-| FAZI-REMOTE-VPN | Windows 10 and later | VPN | 12/05/2026 |
-| Fazi Root CA | Windows 10 and later | Trusted certificate | 12/05/2026 |
+| faizi-REMOTE-VPN | Windows 10 and later | VPN | 12/05/2026 |
+| faizi Root CA | Windows 10 and later | Trusted certificate | 12/05/2026 |
 | SEC-W11-Antivirus-Policy | Windows 10 and later | Microsoft Defender Antivirus | 12/05/2026 |
 | SEC-W11-Baseline-Protection | Windows 10 and later | Endpoint protection | 12/05/2026 |
 
@@ -451,4 +451,4 @@ Reviewed the complete list of deployed configuration profiles in the Intune admi
 
 ---
 
-*Lab completed: Microsoft Intune tenant (Fazi IT Lab) with Wi-Fi, certificate-based VPN (strongSwan Linux backend), trusted certificate deployment, and endpoint security profiles configured.*
+*Lab completed: Microsoft Intune tenant (faizi IT Lab) with Wi-Fi, certificate-based VPN (strongSwan Linux backend), trusted certificate deployment, and endpoint security profiles configured.*
