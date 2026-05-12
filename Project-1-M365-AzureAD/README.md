@@ -67,10 +67,10 @@ Faizi-IT BV — Microsoft 365 Tenant ()
 - [x] Risk-based policies (high risk = force password change)
 
 ### C. Intune Device Management
-- [ ] Windows 11 enrollment configured (Autopilot-ready)
-- [ ] Device compliance policies (BitLocker, Defender, Windows Update)
-- [ ] App deployment (M365 Apps, Chrome, Acrobat Reader)
-- [ ] Configuration profiles (Wi-Fi, VPN, branding wallpaper)
+- [x] Windows 11 enrollment configured (Autopilot-ready)
+- [x] Device compliance policies (BitLocker, Defender, Windows Update)
+- [x] App deployment (M365 Apps, Chrome, Acrobat Reader)
+- [x] Configuration profiles (Wi-Fi, VPN, branding wallpaper)
 
 ### D. Exchange Online & Collaboration
 - [ ] Shared mailboxes (support@, info@, sales@)
