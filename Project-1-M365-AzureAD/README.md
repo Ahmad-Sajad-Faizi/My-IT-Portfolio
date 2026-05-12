@@ -15,7 +15,7 @@ As an IT support professional, managing a full Microsoft 365 environment — inc
 ## Architecture
 
 ```
-Faizi-IT BV — Microsoft 365 Tenant ()
+Faizi-IT BV — Microsoft 365 Tenant (faiziitlab.onmicrosoft.com)
 │
 ├── Azure Active Directory
 │   ├── Global Admin (1x)
