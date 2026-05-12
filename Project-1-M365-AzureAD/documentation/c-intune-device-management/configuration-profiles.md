@@ -1,6 +1,6 @@
 # Configuration Profiles
 
-> **Lab Environment:** Microsoft 365 Business Premium — *faizi IT Lab tenant*  
+> **Lab Environment:** Microsoft 365 Business Premium — *Faizi-IT BV tenant*  
 > **Focus:** Wi-Fi auto-connect, certificate-based VPN with custom Linux VPN server, and endpoint security baselines via Microsoft Intune.
 
 ---
