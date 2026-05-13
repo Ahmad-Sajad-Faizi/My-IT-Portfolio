@@ -86,10 +86,10 @@ Faizi-IT BV — Microsoft 365 Tenant (faiziitlab.onmicrosoft.com)
 - [x] Configuration profiles (Wi-Fi, VPN, branding wallpaper)
 
 ### D. Exchange Online & Collaboration
-- [ ] Shared mailboxes (support@, info@, sales@)
-- [ ] Email aliases configured
-- [ ] Transport rules (disclaimer, external email warning)
-- [ ] Microsoft Teams structure with channels
+- [x] Shared mailboxes (support@, info@, sales@)
+- [x] Email aliases configured
+- [x] Transport rules (disclaimer, external email warning)
+- [x] Microsoft Teams structure with channels
 
 ---
 
@@ -97,10 +97,10 @@ Faizi-IT BV — Microsoft 365 Tenant (faiziitlab.onmicrosoft.com)
 
 | # | Deliverable | Status |
 |---|-------------|--------|
-| 1 | Architecture diagram (draw.io) | in progress |
-| 2 | Step-by-step configuration guide with screenshots | in progress |
-| 3 | Security policy matrix | in progress |
-| 4 | Troubleshooting log | in progress |
+| 1 | Architecture diagram (draw.io) | completed |
+| 2 | Step-by-step configuration guide with screenshots | completed |
+| 3 | Security policy matrix | completed |
+| 4 | Troubleshooting log | completed |
 
 ---
 
