@@ -56,7 +56,7 @@ LinkedIn: https://www.linkedin.com/in/ahmad-sajad-faizi-7bb937265/
 
 ## Progress
 
-- [ ] Project 1 — Microsoft 365 & Azure AD
+- [x] Project 1 — Microsoft 365 & Azure AD
 - [ ] Project 2 — Windows Server & Active Directory  
 - [ ] Project 3 — ITSM & Jira
 - [ ] Project 4 — Networking
