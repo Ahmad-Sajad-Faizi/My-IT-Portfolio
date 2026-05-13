@@ -139,7 +139,6 @@ Reviewed the complete list of shared mailboxes in the organization.
 | All Company | allcompany@faziitlab.onmicrosoft.com | All users |
 | Fazi IT Lab | faziitlab@faziitlab.onmicrosoft.com | Admin team |
 
-![Shared Mailboxes List](assets/shared-mailboxes/image109.png)
 
 ---
 
