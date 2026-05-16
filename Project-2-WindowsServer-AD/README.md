@@ -1,122 +1,149 @@
-# Project 2 — Windows Server & Active Directory
+#requires -RunAsAdministrator
+<#
+.SYNOPSIS
+    Create file shares with NTFS permissions and configure print server
+#>
 
-**Duration:** unknown | **Status:** Planned | **Cost:** €0
+param([switch]$WhatIf)
 
-> On-premises domain setup with Azure AD Connect for hybrid identity. A KMO (SME) in Antwerp needs local file sharing and print services while also using Microsoft 365 in the cloud.
+$ErrorActionPreference = "Stop"
 
----
+$SharesRoot = "C:\Shares"
+$DomainName = "corp.faizi.ovh"
 
-## Objective
+Write-Host "Creating file shares and configuring permissions..." -ForegroundColor Cyan
 
-Build a complete on-premises Windows Server infrastructure and synchronise it with Azure AD to create a hybrid identity environment — one of the most common setups in Belgian SMEs.
+if ($WhatIf) {
+    Write-Host "[WHATIF] Would create shares and set NTFS permissions" -ForegroundColor Magenta
+} else {
+    if (-not (Test-Path $SharesRoot)) {
+        New-Item -Path $SharesRoot -ItemType Directory -Force | Out-Null
+    }
 
----
+    # ============================================
+    # SHARE DEFINITIONS
+    # ============================================
+    $Shares = @(
+        @{
+            Name        = "Finance"
+            Path        = "$SharesRoot\Finance"
+            Group       = "GG_Finance"
+            Description = "Finance Department Files"
+        },
+        @{
+            Name        = "HR"
+            Path        = "$SharesRoot\HR"
+            Group       = "GG_HR"
+            Description = "HR Department Files"
+        },
+        @{
+            Name        = "IT"
+            Path        = "$SharesRoot\IT"
+            Group       = "GG_IT"
+            Description = "IT Department Files"
+        },
+        @{
+            Name        = "Marketing"
+            Path        = "$SharesRoot\Marketing"
+            Group       = "GG_Marketing"
+            Description = "Marketing Department Files"
+        },
+        @{
+            Name        = "Public"
+            Path        = "$SharesRoot\Public"
+            Group       = "Domain Users"
+            Description = "Public shared files"
+        }
+    )
 
-## Architecture
+    foreach ($share in $Shares) {
+        # Create folder
+        if (-not (Test-Path $share.Path)) {
+            New-Item -Path $share.Path -ItemType Directory -Force | Out-Null
+            Write-Host "  Created folder: $($share.Path)" -ForegroundColor Green
+        }
 
-```
-Proxmox Hypervisor (i5-7500 / 8GB RAM / 1TB HDD)
-│
-├── VLAN 100 — Servers (192.168.10.0/24)
-│   └── Windows Server 2022 VM
-│       ├── AD DS — faiziit.local
-│       ├── DNS Server
-│       ├── DHCP Server
-│       ├── File Server (Finance, HR, IT$, Public)
-│       └── Print Server
-│
-├── VLAN 200 — Clients (192.168.20.0/24)
-│   ├── Windows 11 Client 1
-│   └── Windows 11 Client 2
-│
-└── Azure AD Connect (Hybrid Identity)
-    ├── Password Hash Sync (PHS)
-    ├── Seamless SSO
-    └── Hybrid Azure AD Join
-```
+        # Set NTFS permissions
+        $acl = Get-Acl $share.Path
+        $acl.SetAccessRuleProtection($true, $false)
+        Set-Acl $share.Path $acl
 
----
+        # Re-get ACL after protection change
+        $acl = Get-Acl $share.Path
+        $acl.SetAccessRuleProtection($true, $false)
 
-## Technologies
+        # Clear existing rules
+        $acl.Access | ForEach-Object { $acl.RemoveAccessRule($_) | Out-Null }
 
-![Windows Server](https://img.shields.io/badge/Windows_Server_2022-0078D6?style=flat&logo=windows&logoColor=white)
-![Active Directory](https://img.shields.io/badge/Active_Directory-0078D4?style=flat&logo=microsoft&logoColor=white)
-![Proxmox](https://img.shields.io/badge/Proxmox-E57000?style=flat&logo=proxmox&logoColor=white)
-![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=flat&logo=powershell&logoColor=white)
+        # Add Administrators - Full Control
+        $adminRule = New-Object System.Security.AccessControl.FileSystemAccessRule(
+            "Administrators", "FullControl", "ContainerInherit,ObjectInherit", "None", "Allow"
+        )
+        $acl.AddAccessRule($adminRule)
 
----
+        # Add Domain Admins - Full Control
+        $domainAdminRule = New-Object System.Security.AccessControl.FileSystemAccessRule(
+            "Domain Admins", "FullControl", "ContainerInherit,ObjectInherit", "None", "Allow"
+        )
+        $acl.AddAccessRule($domainAdminRule)
 
-## Requirements Checklist
+        # Add department group or Domain Users
+        if ($share.Name -ne "Public") {
+            $groupRule = New-Object System.Security.AccessControl.FileSystemAccessRule(
+                $share.Group, "Modify", "ContainerInherit,ObjectInherit", "None", "Allow"
+            )
+            $acl.AddAccessRule($groupRule)
+        } else {
+            $publicRule = New-Object System.Security.AccessControl.FileSystemAccessRule(
+                "Domain Users", "ReadAndExecute", "ContainerInherit,ObjectInherit", "None", "Allow"
+            )
+            $acl.AddAccessRule($publicRule)
+        }
 
-### A. Proxmox Infrastructure
-- [ ] Windows Server 2022 Eval VM (2 vCPU, 4GB RAM, 100GB disk)
-- [ ] 2x Windows 11 Client VMs
-- [ ] VLANs configured (10 Servers, 20 Clients, 30 Management)
-- [ ] Snapshots at each milestone
+        Set-Acl $share.Path $acl
+        Write-Host "  NTFS permissions set for: $($share.Name)" -ForegroundColor Green
 
-### B. Active Directory Domain Services
-- [ ] Domain promoted: faizi-it.local
-- [ ] OU structure created (Computers, Users, Groups)
-- [ ] 15+ users created via PowerShell bulk import
-- [ ] Security groups (GG_Finance, GG_HR, GG_IT, GG_Sales)
+        # Create SMB share
+        $existingShare = Get-SmbShare -Name $share.Name -ErrorAction SilentlyContinue
+        if (-not $existingShare) {
+            New-SmbShare `
+                -Name $share.Name `
+                -Path $share.Path `
+                -Description $share.Description `
+                -FullAccess "Administrators","Domain Admins" `
+                -ChangeAccess $share.Group
+            Write-Host "  SMB share created: \\$env:COMPUTERNAME\$($share.Name)" -ForegroundColor Green
+        } else {
+            Write-Host "  SMB share exists: $($share.Name)" -ForegroundColor Yellow
+        }
+    }
 
-### C. Core Services
-- [ ] DNS (forward/reverse lookup zones, forwarders)
-- [ ] DHCP (scope 192.168.10.100-200, reservations)
-- [ ] File Server (shares with NTFS + share permissions)
-- [ ] Print Server (2 printers, GPO deployment)
+    # ============================================
+    # PRINT SERVER SETUP
+    # ============================================
+    Write-Host "`nConfiguring Print Server..." -ForegroundColor Cyan
 
-### D. Group Policy
-- [ ] Password policy (min 12 chars, complexity on)
-- [ ] Desktop wallpaper + mapped drives
-- [ ] Windows Update policy
-- [ ] Account lockout (5 attempts, 30 min)
-- [ ] Chrome deployment via MSI
+    $printerName = "SharedPrinter"
+    $existingPrinter = Get-Printer -Name $printerName -ErrorAction SilentlyContinue
+    if (-not $existingPrinter) {
+        Add-PrinterPort -Name "LPT2:" -ErrorAction SilentlyContinue
+        Add-Printer `
+            -Name $printerName `
+            -DriverName "Microsoft IPP Class Driver" `
+            -PortName "LPT2:" `
+            -Shared:$true `
+            -ShareName $printerName `
+            -Published:$true
+        Write-Host "  Printer created: $printerName" -ForegroundColor Green
+    } else {
+        Write-Host "  Printer exists: $printerName" -ForegroundColor Yellow
+    }
 
-### E. Azure AD Connect
-- [ ] Password Hash Synchronisation configured
-- [ ] Seamless SSO enabled
-- [ ] Filter rules (only sync OU=Users)
-- [ ] Hybrid Azure AD Join for Windows 11 clients
+    Set-PrintConfiguration -PrinterName $printerName -Shared $true
 
----
+    Write-Host "`nShares Configuration Summary:" -ForegroundColor Cyan
+    Get-SmbShare | Where-Object { $_.Name -in @("Finance","HR","IT","Marketing","Public") } |
+        Select-Object Name, Path, Description | Format-Table
 
-## Deliverables
-
-| # | Deliverable | Status |
-|---|-------------|--------|
-| 1 | Network diagram (Proxmox topology + VLANs) | In progress |
-| 2 | AD structure diagram (OU hierarchy + GPO links) | In progress |
-| 3 | PowerShell scripts (user creation, GPO backup) | In progress |
-| 4 | Security audit (who has access to what) | In progress |
-| 5 | Troubleshooting guide (AD replication, DNS, sync) | In progress |
-
----
-
-## Folder Structure
-
-```
-Project-2-WindowsServer-AD/
-├── README.md
-├── setup-guide.md
-├── troubleshooting.md
-├── scripts/
-│   ├── bulk-user-creation.ps1
-│   └── gpo-backup.ps1
-└── diagrams/
-    ├── network-diagram.png
-    └── ad-structure.png
-```
-
----
-
-## Resources
-
-- [Windows Server 2022 Evaluation](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2022)
-- [Azure AD Connect Download](https://www.microsoft.com/en-us/download/details.aspx?id=47594)
-- [Proxmox VE Documentation](https://pve.proxmox.com/pve-docs/)
-- [AD DS Documentation](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview)
-
----
-
-*Part of the [IT Portfolio 2026](../README.md) — Ahmad Sajad Faizi*
+    Write-Host "File and Print services configuration complete." -ForegroundColor Green
+}
