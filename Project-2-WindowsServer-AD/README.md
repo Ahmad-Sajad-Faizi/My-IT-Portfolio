@@ -1,122 +1,70 @@
-# Project 2 — Windows Server & Active Directory
+# FaiziIT Project 2 — Windows Server 2022 Automated Deployment
 
-**Duration:** unknown | **Status:** Planned | **Cost:** €0
+Complete unattended PowerShell deployment for Windows Server 2022 with Active Directory, DNS, DHCP, File/Print services, and Group Policy.
 
-> On-premises domain setup with Azure AD Connect for hybrid identity. A KMO (SME) in Antwerp needs local file sharing and print services while also using Microsoft 365 in the cloud.
+## Network Configuration
 
----
+| Setting | Value |
+|---------|-------|
+| Domain | `corp.faizi.ovh` |
+| NetBIOS | `CORP` |
+| Server IP | `192.168.10.2` |
+| Gateway | `192.168.10.1` |
+| Subnet | `/24` |
+| DNS | Points to itself after DC promotion |
 
-## Objective
+## Quick Start
 
-Build a complete on-premises Windows Server infrastructure and synchronise it with Azure AD to create a hybrid identity environment — one of the most common setups in Belgian SMEs.
+```powershell
+# 1. On fresh Windows Server 2022, open PowerShell as Administrator
+# 2. Download and run Phase 1
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Ahmad-Sajad-Faizi/faiziit-project2/main/master-deploy.ps1" -OutFile "C:\scripts\master-deploy.ps1"
 
----
+# 3. Run Phase 1 (pre-DC promotion)
+C:\scripts\master-deploy.ps1 -Phase1
 
-## Architecture
+# 4. REBOOT when prompted
 
-```
-Proxmox Hypervisor (i5-7500 / 8GB RAM / 1TB HDD)
-│
-├── VLAN 100 — Servers (192.168.10.0/24)
-│   └── Windows Server 2022 VM
-│       ├── AD DS — faiziit.local
-│       ├── DNS Server
-│       ├── DHCP Server
-│       ├── File Server (Finance, HR, IT$, Public)
-│       └── Print Server
-│
-├── VLAN 200 — Clients (192.168.20.0/24)
-│   ├── Windows 11 Client 1
-│   └── Windows 11 Client 2
-│
-└── Azure AD Connect (Hybrid Identity)
-    ├── Password Hash Sync (PHS)
-    ├── Seamless SSO
-    └── Hybrid Azure AD Join
+# 5. After reboot, log in as CORP\Administrator
+# 6. Run Phase 2 (post-DC configuration)
+C:\scripts\master-deploy.ps1 -Phase2
 ```
 
----
-
-## Technologies
-
-![Windows Server](https://img.shields.io/badge/Windows_Server_2022-0078D6?style=flat&logo=windows&logoColor=white)
-![Active Directory](https://img.shields.io/badge/Active_Directory-0078D4?style=flat&logo=microsoft&logoColor=white)
-![Proxmox](https://img.shields.io/badge/Proxmox-E57000?style=flat&logo=proxmox&logoColor=white)
-![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=flat&logo=powershell&logoColor=white)
-
----
-
-## Requirements Checklist
-
-### A. Proxmox Infrastructure
-- [ ] Windows Server 2022 Eval VM (2 vCPU, 4GB RAM, 100GB disk)
-- [ ] 2x Windows 11 Client VMs
-- [ ] VLANs configured (10 Servers, 20 Clients, 30 Management)
-- [ ] Snapshots at each milestone
-
-### B. Active Directory Domain Services
-- [ ] Domain promoted: faizi-it.local
-- [ ] OU structure created (Computers, Users, Groups)
-- [ ] 15+ users created via PowerShell bulk import
-- [ ] Security groups (GG_Finance, GG_HR, GG_IT, GG_Sales)
-
-### C. Core Services
-- [ ] DNS (forward/reverse lookup zones, forwarders)
-- [ ] DHCP (scope 192.168.10.100-200, reservations)
-- [ ] File Server (shares with NTFS + share permissions)
-- [ ] Print Server (2 printers, GPO deployment)
-
-### D. Group Policy
-- [ ] Password policy (min 12 chars, complexity on)
-- [ ] Desktop wallpaper + mapped drives
-- [ ] Windows Update policy
-- [ ] Account lockout (5 attempts, 30 min)
-- [ ] Chrome deployment via MSI
-
-### E. Azure AD Connect
-- [ ] Password Hash Synchronisation configured
-- [ ] Seamless SSO enabled
-- [ ] Filter rules (only sync OU=Users)
-- [ ] Hybrid Azure AD Join for Windows 11 clients
-
----
-
-## Deliverables
-
-| # | Deliverable | Status |
-|---|-------------|--------|
-| 1 | Network diagram (Proxmox topology + VLANs) | In progress |
-| 2 | AD structure diagram (OU hierarchy + GPO links) | In progress |
-| 3 | PowerShell scripts (user creation, GPO backup) | In progress |
-| 4 | Security audit (who has access to what) | In progress |
-| 5 | Troubleshooting guide (AD replication, DNS, sync) | In progress |
-
----
-
-## Folder Structure
+## Repository Structure
 
 ```
-Project-2-WindowsServer-AD/
+faiziit-project2/
 ├── README.md
-├── setup-guide.md
-├── troubleshooting.md
-├── scripts/
-│   ├── bulk-user-creation.ps1
-│   └── gpo-backup.ps1
-└── diagrams/
-    ├── network-diagram.png
-    └── ad-structure.png
+├── master-deploy.ps1          # Orchestrator script
+├── Phase1-PreDC/              # Run before DC promotion
+│   ├── 01-Set-Network.ps1
+│   ├── 02-Install-Roles.ps1
+│   └── 03-Promote-DC.ps1
+├── Phase2-PostDC/             # Run after DC promotion & reboot
+│   ├── 04-Configure-DNS.ps1
+│   ├── 05-Configure-DHCP.ps1
+│   ├── 06-Create-ADObjects.ps1
+│   ├── 07-Configure-GPOs.ps1
+│   └── 08-Create-Shares.ps1
+└── data/
+    └── users.csv              # User bulk import data
 ```
 
----
+## Requirements
 
-## Resources
+- Windows Server 2022 Standard/Datacenter (Evaluation OK)
+- Static IP configured or DHCP from OPNsense
+- Internet access for downloading scripts
+- Minimum 4GB RAM, 2 vCPU, 60GB disk
 
-- [Windows Server 2022 Evaluation](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2022)
-- [Azure AD Connect Download](https://www.microsoft.com/en-us/download/details.aspx?id=47594)
-- [Proxmox VE Documentation](https://pve.proxmox.com/pve-docs/)
-- [AD DS Documentation](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview)
+## Troubleshooting
 
----
+| Issue | Solution |
+|-------|----------|
+| Execution policy blocks scripts | `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Force` |
+| Network download fails | Check DNS/gateway connectivity to GitHub |
+| DC promotion fails | Verify DNS is installed first, check logs at `C:\Windows\Logs\DISM\dism.log` |
 
-*Part of the [IT Portfolio 2026](../README.md) — Ahmad Sajad Faizi*
+## Author
+
+Ahmad Sajad Faizi — IT Portfolio Project 2026
