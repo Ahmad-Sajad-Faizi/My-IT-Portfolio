@@ -13,22 +13,6 @@ Complete unattended PowerShell deployment for Windows Server 2022 with Active Di
 | Subnet | `/24` |
 | DNS | Points to itself after DC promotion |
 
-## Quick Start
-
-```powershell
-# 1. On fresh Windows Server 2022, open PowerShell as Administrator
-# 2. Download and run Phase 1
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Ahmad-Sajad-Faizi/faiziit-project2/main/master-deploy.ps1" -OutFile "C:\scripts\master-deploy.ps1"
-
-# 3. Run Phase 1 (pre-DC promotion)
-C:\scripts\master-deploy.ps1 -Phase1
-
-# 4. REBOOT when prompted
-
-# 5. After reboot, log in as CORP\Administrator
-# 6. Run Phase 2 (post-DC configuration)
-C:\scripts\master-deploy.ps1 -Phase2
-```
 
 ## Repository Structure
 
